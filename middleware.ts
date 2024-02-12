@@ -5,7 +5,7 @@ export const middleware = async (req: NextRequest) => {
   if (req.nextUrl.pathname === "/") {
     console.log("track");
     try {
-      analytics.track("page", {
+      analytics.track("pageview", {
         page: "/",
         country: req.geo?.country,
       });
